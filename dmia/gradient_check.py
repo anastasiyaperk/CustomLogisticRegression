@@ -4,11 +4,10 @@ from random import randrange
 
 def eval_numerical_gradient(f, x):
     """
-  a naive implementation of numerical gradient of f at x 
-  - f should be a function that takes a single argument
-  - x is the point (numpy array) to evaluate the gradient at
-  """
-
+    a naive implementation of numerical gradient of f at x
+    - f should be a function that takes a single argument
+    - x is the point (numpy array) to evaluate the gradient at
+    """
     fx = f(x)  # evaluate function value at original point
     grad = np.zeros(x.shape)
     h = 0.00001
@@ -31,9 +30,9 @@ def eval_numerical_gradient(f, x):
 
 def grad_check_sparse(f, x, analytic_grad, num_checks):
     """
-  sample a few random elements and only return numerical
-  in this dimensions.
-  """
+    sample a few random elements and only return numerical
+    in this dimensions.
+    """
     h = 1e-5
 
     for i in range(num_checks):
